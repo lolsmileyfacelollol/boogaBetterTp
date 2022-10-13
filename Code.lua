@@ -55,7 +55,6 @@ local function TpArea(part)
             Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Players.LocalPlayer.Character.HumanoidRootPart.CFrame:Lerp(part.CFrame+Vector3.new(0,part.Size.Y,0), i)
             if i == 1 then
                Lerping = false
-               break
             end
         end
     end
