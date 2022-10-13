@@ -51,6 +51,9 @@ local function TpArea(part)
     for i = 0,1,0.01 do
         task.wait()
         Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Players.LocalPlayer.Character.HumanoidRootPart.CFrame:Lerp(part.CFrame+Vector3.new(0,part.Size.Y,0), i)
+        if Players.LocalPlayer.Character.HumanoidRootPart.CFrame == part.CFrame+Vector3.new(0,part.Size.Y,0) then
+           break
+        end
     end
 end
 -- i love stealing features from infinite yield and adding them to my script :sunglasses:
