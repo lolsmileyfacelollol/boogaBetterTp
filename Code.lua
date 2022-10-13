@@ -277,11 +277,9 @@ while wait(0.2) do
         wait(0.1)
         if part.Position.Y <= 30 then
             --TpArea(part)
-            if not Lerping then
-                Lerping = true
+            if Players.LocalPlayer.Character.HumanoidRootPart.CFrame ~= part.CFrame+Vector3.new(0,part.Size.Y,0) then
                 TweenService:Create(Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(realDistance/10, Enum.EasingStyle.Linear), {CFrame=part.CFrame+Vector3.new(0,part.Size.Y,0)}):Play()
                 task.wait(realDistance/10)
-                lerping = false
             end
         end
     end
