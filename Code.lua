@@ -48,7 +48,7 @@ FLYING = false
 iyflyspeed = 0.25
 vehicleflyspeed = 0.25
 local function TpArea(part)
-    for i = 0,1,0.001 do
+    for i = 0,1,0.005 do
         task.wait()
         Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Players.LocalPlayer.Character.HumanoidRootPart.CFrame:Lerp(part.CFrame+Vector3.new(0,part.Size.Y,0), i)
         if i == 1 then
